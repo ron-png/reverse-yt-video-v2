@@ -1,0 +1,27 @@
+Install brew (https://brew.sh/)
+
+:commandsStart
+brew install python
+brew install ffmpeg
+brew install yt-dlp
+:commandsEnd
+
+create venv
+
+
+:commandsStart
+source /Users/a/coding/.venv/bin/activate
+
+/Users/a/coding/.venv/bin/python /Users/a/coding/reverse_video.py
+:commandsEnd
+
+
+
+
+need a client_secrets.json from google api https://www.youtube.com/watch?v=aFwZgth790Q
+
+
+ 
+:commandsStart
+pip3 install pytube numpy pydub yt-dlp english-words google-api-python-client oauth2client httplib2 
+:commandsEnd
