@@ -145,11 +145,16 @@ def upload_video(videolinkbro):
                     f'--description=\'===Credits===\nChannel: {videochannel} \nVideo: {videolinkbro}\n\nThis video falls under Section 107 of the Copyright Act called fair use: https://www.youtube.com/watch?v=1PvjRIkwIl8\n\n\n\n\nWhy do I upload these videos?\nBecause I find it interesting and satisfying to watch such videos. Maybe I am not the only one\' ' +\
                     f'--keywords=\'{videotags}\' ' +\
                     f'--category=\'24\' ' +\
-                    f'--privacyStatus=\'private\'' # public or private
+                    f'--privacyStatus=\'public\'' # public or private
     subprocess.run(command, shell=True)
 
     print('upload process end')
 
+def upload_video_tiktok(videolinkbro):
+    auth = AuthBackend(cookies='www.tiktok.com_cookies.txt')
+    upload_video(videoname,
+            description=f'===Credits===\nChannel: {videochannel} \nVideo: {videolinkbro}\n\nThis video falls under Section 107 of the Copyright Act called fair use: https://www.youtube.com/watch?v=1PvjRIkwIl8\n\n\n\n\nWhy do I upload these videos?\nBecause I find it interesting and satisfying to watch such videos. Maybe I am not the only one',
+            cookies='cookies.txt')
 
 
 yes = ["JA", "J", ""]
@@ -246,8 +251,11 @@ for items in url:
     except:
         continue
     try:
+        print("youtube upload")
         upload_video(items)
     except:
         continue
+
+
 
 print('done')

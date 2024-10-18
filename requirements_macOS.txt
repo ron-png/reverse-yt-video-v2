@@ -23,5 +23,5 @@ need a client_secrets.json from google api https://www.youtube.com/watch?v=aFwZg
 
  
 :commandsStart
-pip3 install pytube numpy pydub yt-dlp english-words google-api-python-client oauth2client httplib2 
+pip3 install pytube numpy pydub yt-dlp english-words google-api-python-client oauth2client httplib2
 :commandsEnd
